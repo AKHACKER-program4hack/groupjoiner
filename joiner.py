@@ -16,9 +16,9 @@ with TelegramClient('anon', api_id, api_hash) as Client:
                 groupstojoin = f.read().splitlines()
                 for group in groupstojoin:
                     # group = "https://t.me/test123456gagaha"
-                    if len(joinedgroups) == 10:
+                    if len(joinedgroups) == 20:
                         break
-                    elif len(joinedgroups) != 10:
+                    elif len(joinedgroups) != 20:
                         n = await Client(JoinChannelRequest(group))
                         if n.updates:
                             print("Joined")
