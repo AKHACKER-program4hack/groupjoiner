@@ -39,7 +39,7 @@ with TelegramClient('anon', api_id, api_hash) as Client:
                 if "A wait of " in str(error):
                     s = str(error).split()[3]
                     print("Sleeping for " + str(s) + " seconds to start again cause by telegram server")
-                    time.sleep(s)
+                    time.sleep(int(s))
                 else:
                     print(error)
                     continue
