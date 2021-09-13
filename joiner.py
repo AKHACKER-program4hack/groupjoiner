@@ -19,7 +19,7 @@ with TelegramClient('anon', api_id, api_hash) as Client:
                         continue
                     for group in groupstojoin:
                         if len(joinedgroups) == 5:
-                            pass
+                            break
                         elif len(joinedgroups) != 5:
                             n = await Client(JoinChannelRequest(group))
                             if n.updates:
